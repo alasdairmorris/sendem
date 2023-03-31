@@ -4,35 +4,46 @@ A command-line tool for sending emails via SMTP.
 
 ## Installation
 
-`sendem` will run on most Linux and Mac OS X systems.
+`sendem` will run on most Linux, MacOS and Windows systems.
 
-To install it, just find the appropriate one-liner below - based on the destination O/S and architecture - and copy-paste it into your terminal.
-
-Feel free to change the install dir - `$HOME/bin` in the examples below - to be something more appropriate for your needs.
+To install it, just `cd` into the directory in which you wish to install it and then copy-paste the appropriate one-liner from below (based on the destination O/S and architecture).
 
 ### Linux (32-bit)
 
 ```
-curl -s -L -o - https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-linux-386.tar.gz | tar -zxf - -C $HOME/bin
+curl -s -L -o sendem https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-linux-386 && chmod +x sendem
 ```
 
 ### Linux (64-bit)
 
 ```
-curl -s -L -o - https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-linux-amd64.tar.gz | tar -zxf - -C $HOME/bin
+curl -s -L -o sendem https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-linux-amd64 && chmod +x sendem
 ```
 
 ### Mac OS X (Intel)
 
 ```
-curl -s -L -o - https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-darwin-amd64.tar.gz | tar -zxf - -C $HOME/bin
+curl -s -L -o sendem https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-darwin-amd64 && chmod +x sendem
 ```
 
 ### Mac OS X (Apple Silicon)
 
 ```
-curl -s -L -o - https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-darwin-arm64.tar.gz | tar -zxf - -C $HOME/bin
+curl -s -L -o sendem https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-darwin-arm64 && chmod +x sendem
 ```
+
+### Windows (32-bit)
+
+```
+curl -s -L -o sendem.exe https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-windows-386.exe
+```
+
+### Windows (64-bit)
+
+```
+curl -s -L -o sendem.exe https://github.com/alasdairmorris/sendem/releases/latest/download/sendem-windows-amd64.exe
+```
+
 
 ### Build From Source
 
@@ -75,3 +86,8 @@ Homepage: https://github.com/alasdairmorris/sendem
 ```
 $ date | sendem -a /tmp/file.pdf -f sender@whatever.com -s Subject recipient@example.com
 ```
+
+
+## License
+
+[MIT](LICENSE)
